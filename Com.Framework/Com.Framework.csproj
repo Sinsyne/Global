@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4FC12387-4C40-4CE0-A327-9FFCDAFFEEF8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Com.Framework</RootNamespace>
+    <AssemblyName>Com.Framework</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Core\Common\EnumHelper.cs" />
+    <Compile Include="Core\Common\FileHelper.cs" />
+    <Compile Include="Core\Common\ReflectHelper.cs" />
+    <Compile Include="Core\Common\SerializeHelper.cs" />
+    <Compile Include="Core\Common\ValueHelper.cs" />
+    <Compile Include="Core\Definition\RegexPatterns.cs" />
+    <Compile Include="Core\Generics\SerializableDictionary.cs" />
+    <Compile Include="Core\Generics\TKeyValue.cs" />
+    <Compile Include="Core\Generics\TThread.cs" />
+    <Compile Include="Database\Orm\Attributes\FieldAttribute.cs" />
+    <Compile Include="Database\Orm\Attributes\IdentityAttribute.cs" />
+    <Compile Include="Database\Orm\Attributes\IndexAttribute.cs" />
+    <Compile Include="Database\Orm\Attributes\IndexColumnAttribute.cs" />
+    <Compile Include="Database\Orm\Attributes\NullableAttribute.cs" />
+    <Compile Include="Database\Orm\Attributes\PartTableColumnAttribute.cs" />
+    <Compile Include="Database\Orm\Attributes\PrimaryKeyAttribute.cs" />
+    <Compile Include="Database\Orm\Attributes\PrimaryKeyColumnAttribute.cs" />
+    <Compile Include="Database\Orm\Attributes\TableAttribute.cs" />
+    <Compile Include="Database\Orm\Attributes\UniqueAttribute.cs" />
+    <Compile Include="Database\Orm\Binding\BindingField.cs" />
+    <Compile Include="Database\Orm\Binding\BindingIndex.cs" />
+    <Compile Include="Database\Orm\Binding\BindingPrimaryKey.cs" />
+    <Compile Include="Database\Orm\Binding\BindingTable.cs" />
+    <Compile Include="Database\Orm\Entities.cs" />
+    <Compile Include="Database\Orm\Enum\DbReadMode.cs" />
+    <Compile Include="Database\IDatabase.cs" />
+    <Compile Include="Extra\ExtensionGroup.cs" />
+    <Compile Include="Extra\IConvertableString.cs" />
+    <Compile Include="Extra\IExtension.cs" />
+    <Compile Include="Extra\IVerifiableString.cs" />
+    <Compile Include="Extra\ObjectExtension.cs" />
+    <Compile Include="Extra\StringExtension.cs" />
+    <Compile Include="Images\Enum\EnumExifDataTypes.cs" />
+    <Compile Include="Images\Enum\EnumExifTagNames.cs" />
+    <Compile Include="Images\Enum\EnumExposureMeteringModes.cs" />
+    <Compile Include="Images\Enum\EnumExposurePrograms.cs" />
+    <Compile Include="Images\Enum\EnumLightSources.cs" />
+    <Compile Include="Images\Enum\EnumOrientations.cs" />
+    <Compile Include="Core\Common\BitConverterEx.cs" />
+    <Compile Include="Images\Exif\Common\ExifBitConverter.cs" />
+    <Compile Include="Images\Exif\Common\ExifExtensionMethods.cs" />
+    <Compile Include="Images\Exif\Common\JPEGFile.cs" />
+    <Compile Include="Images\Exif\Common\MathEx.cs" />
+    <Compile Include="Images\Exif\Enum\ExifEnums.cs" />
+    <Compile Include="Images\Exif\Enum\ExifTag.cs" />
+    <Compile Include="Images\Exif\Enum\IFD.cs" />
+    <Compile Include="Images\Exif\Enum\JPEGMarker.cs" />
+    <Compile Include="Images\Exif\Exceptions\IFD0IsEmptyException.cs" />
+    <Compile Include="Images\Exif\Exceptions\NotValidJPEGFileException.cs" />
+    <Compile Include="Images\Exif\Exceptions\SectionExceeds64KBException.cs" />
+    <Compile Include="Images\Exif\Exceptions\UnknownEnumTypeException.cs" />
+    <Compile Include="Images\Exif\ExifFile.cs" />
+    <Compile Include="Images\Exif\Generics\ExifEnumProperty.cs" />
+    <Compile Include="Images\Exif\Provider\ExifPropertyFactory.cs" />
+    <Compile Include="Images\Exif\Schema\ExifCircularSubjectArea.cs" />
+    <Compile Include="Images\Exif\Schema\ExifDateTime.cs" />
+    <Compile Include="Images\Exif\Schema\ExifEncodedString.cs" />
+    <Compile Include="Images\Exif\Schema\ExifPointSubjectArea.cs" />
+    <Compile Include="Images\Exif\Schema\ExifRectangularSubjectArea.cs" />
+    <Compile Include="Images\Exif\Schema\ExifSRationalArray.cs" />
+    <Compile Include="Images\Exif\Provider\ExifTagFactory.cs" />
+    <Compile Include="Images\Exif\Schema\ExifAscii.cs" />
+    <Compile Include="Images\Exif\Schema\ExifByte.cs" />
+    <Compile Include="Images\Exif\Schema\ExifByteArray.cs" />
+    <Compile Include="Images\Exif\Schema\ExifInterOperability.cs" />
+    <Compile Include="Images\Exif\Schema\ExifProperty.cs" />
+    <Compile Include="Images\Exif\Schema\ExifSInt.cs" />
+    <Compile Include="Images\Exif\Schema\ExifSIntArray.cs" />
+    <Compile Include="Images\Exif\Schema\ExifSRational.cs" />
+    <Compile Include="Images\Exif\Schema\ExifUInt.cs" />
+    <Compile Include="Images\Exif\Schema\ExifUIntArray.cs" />
+    <Compile Include="Images\Exif\Schema\ExifUndefined.cs" />
+    <Compile Include="Images\Exif\Schema\ExifURational.cs" />
+    <Compile Include="Images\Exif\Schema\ExifURationalArray.cs" />
+    <Compile Include="Images\Exif\Schema\ExifUShort.cs" />
+    <Compile Include="Images\Exif\Schema\ExifUShortArray.cs" />
+    <Compile Include="Images\Exif\Schema\ExifVersion.cs" />
+    <Compile Include="Images\Exif\Schema\GPSLatitudeLongitude.cs" />
+    <Compile Include="Images\Exif\Schema\GPSTimeStamp.cs" />
+    <Compile Include="Images\Exif\Exceptions\UnknownIFDSectionException.cs" />
+    <Compile Include="Images\Exif\Schema\JPEGSection.cs" />
+    <Compile Include="Images\Exif\Structs\Bin.cs" />
+    <Compile Include="Images\Exif\Structs\IBinStream.cs" />
+    <Compile Include="Images\Exif\Structs\MemoryBinStream.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DLL\Excel.dll" />
+    <Content Include="DLL\ICSharpCode.SharpZipLib.dll" />
+    <Content Include="DLL\itextsharp.dll" />
+    <Content Include="DLL\Maticsoft.DBUtility.dll" />
+    <Content Include="DLL\MySql.Data.dll" />
+    <Content Include="DLL\OWC10Chart.dll" />
+    <Content Include="DLL\System.Data.SQLite.DLL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Database\Provider\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
