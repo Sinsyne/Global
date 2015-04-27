@@ -28,7 +28,7 @@ namespace Com.Framework.Images
         public static extern bool AnimateWindow(IntPtr hwnd, uint dwTime, AnimationType dwFlags);
 
         public static void TryAnimateWindowByAnimationType(PictureBox pictureBox1, PictureBox pictureBox2
-            , AnimationType type, uint animationTimes = 1000, Action<Exception> exceptionHandler)
+            , AnimationType type, uint animationTimes = 1000, Action<Exception> exceptionHandler = null)
         {
             try
             {
